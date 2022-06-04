@@ -32,9 +32,10 @@
 	4. Copy only URL and paste it within the src="" field below
 -->
             <div id="map">
-              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.2927169230035!2d31.243832270000834!3d30.04541807753087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584117518f6f9b%3A0x545805fc0a794918!2z2YXYs9mF2Lcg2KfZiNmE2KfYryDZg9ix2YrZg9ip!5e1!3m2!1sen!2seg!4v1654356785113!5m2!1sen!2seg"  width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
+          
           <div class="col-md-4">
             <div class="left-content">
               <h4>About our office</h4>

@@ -36,6 +36,15 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-header">{{__('general.governorate')}}</li>
+                <li class="nav-item @if(\Route::is('products.*')) active @endif">
+                        <a href="{{route('products.index')}}"
+                           class="nav-link @if(\Route::is('products.*')) active @endif">
+                            <i class="nav-icon fab fa-product-hunt"></i>
+                            <p>
+                                {{__('general.side.products')}}
+                            </p>
+                        </a>
+                    </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
