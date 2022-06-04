@@ -31,7 +31,21 @@ Route::group(['middleware' => ['auth', 'Localization']], function () {
     
     
 });
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth', 'Localization']], function () {
+
+    Route::get('/change-lang/{lang}', function ($lang) {
+        App::setLocale($lang);
+        \Illuminate\Support\Facades\Config::set('locale', $lang);
+        \Illuminate\Support\Facades\Session::put('locale', $lang);
+        return redirect()->back();
+    })->name('change.lang');
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+    Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+    Route::get('/product', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
+
+});
+
